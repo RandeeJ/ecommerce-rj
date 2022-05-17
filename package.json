@@ -4,8 +4,7 @@
   "description": "Basic skeleton codebase for React/Redux/Router applications.",
 
   "engines": {
-    "node": "14.14.0",
-    "npm": "8.10.0"
+    "node": "14.14.0"
   },
 
   "scripts": {
