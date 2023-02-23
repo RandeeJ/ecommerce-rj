@@ -1,7 +1,8 @@
 {
-  "name": "react-redux-router",
+  "name": "rj-ecommerce-project",
   "version": "1.0.0",
-  "description": "Basic skeleton codebase for React/Redux/Router applications.",
+  "description": "Basic skeleton of e-commerce website.",
+  "homepage": "https://randeej.github.io/ecommerce-rj",
   "engines": {
     "node": "14.14.0"
   },
@@ -9,13 +10,10 @@
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
-    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "precommit": "eslint src",
     "prod": "NODE_ENV=production node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:bottega-code-school/js-builder.git"
   },
   "keywords": [
     "es6",
@@ -28,12 +26,7 @@
     "sass",
     "css module"
   ],
-  "author": "Your Name Here",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bottega-code-school/js-builder/issues"
-  },
-  "homepage": "https://github.com/bottega-code-school/js-builder",
+  "author": "Randee Johnson",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -62,9 +55,9 @@
     "express": "4.17.1",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
+    "gh-pages": "^5.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.13.1",
     "postcss-loader": "^2.1.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -73,6 +66,7 @@
     "react-router-dom": "5.1.2",
     "redux": "4.0.5",
     "redux-form": "^8.3.7",
+    "sass": "^1.58.3",
     "sass-loader": "^7.1.0",
     "save": "^2.4.0",
     "style-loader": "^0.21.0",
